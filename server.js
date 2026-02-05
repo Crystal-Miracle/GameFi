@@ -4,7 +4,7 @@ const config = require('./config');
 const configureMiddleware = require('./middleware');
 const configureRoutes = require('./routes');
 const configureClient = require('./middleware/client');
-const connectUser = require('./controllers/users').connectUser;
+const connectWallet = require('./controllers/users').connectWallet;
 const errorHandler = require('./middleware/errorHandler');
 const bodyParser = require("body-parser");
 
@@ -26,7 +26,7 @@ const server = app.listen(config.PORT, '127.0.0.1', () => {
   console.log(
     `MarketHub is running in ${config.NODE_ENV} mode at http://127.0.0.1:${config.PORT}`
   );
-  connectUser();
+  connectWallet();
 });
 
 const gracefulShutdown = (signal) => {
