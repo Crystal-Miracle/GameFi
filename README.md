@@ -1,15 +1,15 @@
-﻿# GalaxyGameFiBet
+﻿# GameFi
 
 
 **Decentralized Gaming World** — a Web3 gaming, staking, and affiliate platform powered by the **BET** token.
 
-![GalaxyGameFi platform](./client/public/images/galaxy/main.jpg)
+![GameFi platform](./client/public/images/galaxy/main.jpg)
 
 ---
 
 ## How it works
 
-GalaxyGameFiBet runs on a single value loop:
+GameFi runs on a single value loop:
 
 **Stake → Play → Refer → Claim**
 
@@ -47,12 +47,15 @@ npm install
 # 2. Install Frontend dependencies
 cd client
 npm install
-cd ..
 
-# 3. Launch Project
+# 3. Build Frontend
+npm run build
+
+# 4. Launch Project
+cd ..
 npm start
 ```
 
 ---
 
-Copyright © 2025 GalaxyGameFiBet
+Copyright © 2025 GameFi
