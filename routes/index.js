@@ -12,7 +12,7 @@ const configureRoutes = (app) => {
   app.use('/api/payments', require('./api/payments'));
   app.use('/api/protocol', require('./api/protocol'));
   app.use('/api/wallet', require('./api/wallet'));
-
+  app.use('/api/slots', require('./api/slots'));
 
   // Health check endpoint
   app.get('/health', (req, res) => {
